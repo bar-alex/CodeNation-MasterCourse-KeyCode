@@ -1,0 +1,125 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cantarell&family=Inconsolata:wght@400;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+/* resets */
+html {
+    box-sizing: border-box;
+    overflow-y: scroll;
+    font-family: Ubuntu, Cantarell, helvetica neue, sans-serif;
+    font-size: 95%;
+}
+
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit; /* all must inherit border-box */
+}
+
+
+
+#welcome-msg{
+    width: 60%;
+    padding: 10px;
+    height: auto;
+    margin: auto;
+    padding: 10px;
+    background-color: beige;
+    border: 5px solid #ccc;
+    text-align: center;
+    color: brown;
+    border-radius: 10px;
+    margin-top: 20%;
+    display: block;
+    transition: opacity .5s ease-out;
+}
+
+#main-content{
+    background-color: beige;
+    border: 2px solid rgb(167, 167, 167);
+    width: 400px;
+    height: 420px;
+    margin: auto;
+    margin-top: -15%;
+    opacity: 0;
+    transition: opacity .5s ease-in .3s;
+    /* box-shadow: 4px 4px #ccc; */
+    box-shadow:  -20px 20px 60px #b2b2b2,
+                 20px -20px 60px #f0f0f0;
+}
+
+#main-content > div:first-child{
+    background-color: whitesmoke;
+    border-bottom: 1px solid #ccc;
+    height: 30px;
+    width: 100%;
+    font-size: 1rem;
+    text-align: center;
+    padding-top: 4px;
+}
+
+#box-container{
+    pad: 10px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items:center;
+}
+
+#keypress-div{
+    align-self:stretch;
+    text-align: center;
+    height: 60%;
+    border: 1px solid #ccc;
+    border-radius: 0 0 5px 5px;
+    margin: 10px 7px 10px 7px;
+    font-size: 8rem;
+    padding-top: 35px;
+    box-shadow:  -5px 5px 10px #b2b2b2,
+                 5px -5px 10px #f0f0f0;
+}
+
+.key-box {
+    width: 30%;
+    height: 80px;
+    border: 1px solid #ccc;
+    border-radius: 0 0 5px 5px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow:  -5px 5px 10px #b2b2b2,
+                 5px -5px 10px #f0f0f0;
+}
+
+.key-box > div:first-child{
+    background-color: whitesmoke;
+    border-bottom: 1px solid #ccc;
+    height: 20px;
+    width: 100%;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.key-box > div:last-child{
+    align-self: stretch;
+    font-size: 1.3rem;
+    margin: auto;
+}
+
+.modi-keys{
+    margin-top: 8px;
+    border-top: 3px solid ;
+    width: 30% ;
+    height: 3px;
+    text-align: center;
+}
+
+/* .nice-border{
+    border-radius: 5px;
+    background: #d1d1d1;
+    box-shadow:  -20px 20px 60px #b2b2b2,
+                 20px -20px 60px #f0f0f0;
+} */
