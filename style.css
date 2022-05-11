@@ -18,6 +18,15 @@ html {
 }
 
 
+body{
+    /* background: fixed no-repeat url("/assets/background.webp"); */
+    background: fixed no-repeat url("/assets/background.webp");
+    background-size: cover;
+    /* background-size: contain; */
+    background-attachment: fixed;
+    transition: background 1s ease-out;
+}
+
 
 #welcome-msg{
     width: 60%;
@@ -25,19 +34,28 @@ html {
     height: auto;
     margin: auto;
     padding: 10px;
-    background-color: beige;
-    border: 5px solid #ccc;
+    /* background-color: rgb(245, 245, 220); */
+    /* border: 5px solid #ccc; */
+    background-color: rgb(245, 245, 220, .85);
+    border: 2px solid white;
     text-align: center;
-    color: brown;
+    user-select: none;
+    /* color: brown; */
+    text-shadow: #FC0 1px 0 5px;
     border-radius: 10px;
     margin-top: 20%;
     display: block;
     transition: opacity .5s ease-out;
+    box-shadow:  -20px 20px 60px #b2b2b2,
+                 20px -20px 60px #f0f0f0;
+
 }
 
 #main-content{
-    background-color: beige;
-    border: 2px solid rgb(167, 167, 167);
+    /* background-color: beige; */
+    background-color: rgba(245, 245, 245, 0.75);
+    /* border: 2px solid rgb(167, 167, 167); */
+    border: 1px solid white;
     width: 400px;
     height: 420px;
     margin: auto;
@@ -45,16 +63,21 @@ html {
     opacity: 0;
     transition: opacity .5s ease-in .3s;
     /* box-shadow: 4px 4px #ccc; */
+    border-radius: 5px;
     box-shadow:  -20px 20px 60px #b2b2b2,
                  20px -20px 60px #f0f0f0;
 }
 
 #main-content > div:first-child{
-    background-color: whitesmoke;
+    /* background-color: whitesmoke; */
+    background-color: rgba(245, 245, 245, 0.8);
     border-bottom: 1px solid #ccc;
     height: 30px;
     width: 100%;
     font-size: 1rem;
+    user-select: none;
+    /* text-shadow: 1px 1px 2px pink; */
+    text-shadow: #FC0 1px 0 5px;
     text-align: center;
     padding-top: 4px;
 }
@@ -95,7 +118,8 @@ html {
 }
 
 .key-box > div:first-child{
-    background-color: whitesmoke;
+    /* background-color: whitesmoke; */
+    background-color: rgba(245, 245, 245, 0.8);
     border-bottom: 1px solid #ccc;
     height: 20px;
     width: 100%;
@@ -123,3 +147,16 @@ html {
     box-shadow:  -20px 20px 60px #b2b2b2,
                  20px -20px 60px #f0f0f0;
 } */
+
+
+.glass-10 {
+    border: 1px solid rgba(255,255,255,.7);
+    box-shadow: 0 0 1rem 0 rgba(0,0,0,.3);
+    backdrop-filter: blur(10px);
+}
+
+.glass-30 {
+    border: 1px solid rgba(255,255,255,.7);
+    box-shadow: 0 0 1rem 0 rgba(0,0,0,.3);
+    backdrop-filter: blur(10px);
+}

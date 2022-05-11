@@ -13,6 +13,16 @@ const evKeyShift    = document.getElementById('ev-shift');
 const evKeyAlt      = document.getElementById('ev-alt');
 
 
+// cycle through background
+setInterval(() => {
+    const rnd = Math.ceil(Math.random()*3);
+    document.body.style.background = 
+        rnd==1 ? 'fixed no-repeat url("/assets/background.webp")': 
+        rnd==2 ? 'fixed no-repeat url("/assets/background2.jpg")':
+        'fixed no-repeat url("/assets/background3.webp")';
+    document.body.style.backgroundSize = 'cover';
+}, 1000*10);  // 5 min ->  1000*60*5
+
 document.addEventListener('keydown', (event) => {
     
     console.log(event);
@@ -31,14 +41,14 @@ document.addEventListener('keydown', (event) => {
     evKey.textContent       = event.key;
     evWhich.textContent     = event.which;
     
-    evKeyCtrl.style.borderColor = event.ctrlKey   ? 'blue'  : '#ccc';
-    evKeyCtrl.style.color       = event.ctrlKey   ? 'black' : '#ccc';
+    evKeyCtrl.style.borderColor = event.ctrlKey   ? 'blue'  : 'whitesmoke';  //#ccc
+    evKeyCtrl.style.color       = event.ctrlKey   ? 'black' : 'whitesmoke';
 
-    evKeyShift.style.borderColor = event.shiftKey ? 'red'   : '#ccc';
-    evKeyShift.style.color       = event.shiftKey ? 'black' : '#ccc';
+    evKeyShift.style.borderColor = event.shiftKey ? 'red'   : 'whitesmoke';
+    evKeyShift.style.color       = event.shiftKey ? 'black' : 'whitesmoke';
 
-    evKeyAlt.style.borderColor  = event.altKey    ? 'chartreuse' : '#ccc';
-    evKeyAlt.style.color        = event.altKey    ? 'black'      : '#ccc';
+    evKeyAlt.style.borderColor  = event.altKey    ? 'chartreuse' : 'whitesmoke';
+    evKeyAlt.style.color        = event.altKey    ? 'black'      : 'whitesmoke';
 
 });
 
