@@ -16,13 +16,12 @@ html {
     margin: 0;
     box-sizing: inherit; /* all must inherit border-box */
 }
+/* resets */
 
 
 body{
-    /* background: fixed no-repeat url("/assets/background.webp"); */
     background: fixed no-repeat url("/assets/background.webp");
     background-size: cover;
-    /* background-size: contain; */
     background-attachment: fixed;
     transition: background 1s ease-out;
 }
@@ -34,50 +33,49 @@ body{
     height: auto;
     margin: auto;
     padding: 10px;
-    /* background-color: rgb(245, 245, 220); */
-    /* border: 5px solid #ccc; */
-    background-color: rgb(245, 245, 220, .85);
-    border: 2px solid white;
+    background-color: rgb(245, 245, 220, .65);
+    border: 1px solid white;
     text-align: center;
     user-select: none;
-    /* color: brown; */
     text-shadow: #FC0 1px 0 5px;
-    border-radius: 10px;
+    border-radius: 5px;
     margin-top: 20%;
     display: block;
     transition: opacity .5s ease-out;
-    box-shadow:  -20px 20px 60px #b2b2b2,
-                 20px -20px 60px #f0f0f0;
+    box-shadow:  
+        -20px 20px 60px #b2b2b2,
+        20px -20px 60px #f0f0f0;
 
 }
 
 #main-content{
-    /* background-color: beige; */
-    background-color: rgba(245, 245, 245, 0.75);
-    /* border: 2px solid rgb(167, 167, 167); */
+    border-radius: 5px;
+    background-color: rgba(204, 247, 255, 0.6);
     border: 1px solid white;
+    border-radius: 5px;
+
     width: 400px;
     height: 420px;
     margin: auto;
     margin-top: -15%;
-    opacity: 0;
+
     transition: opacity .5s ease-in .3s;
-    /* box-shadow: 4px 4px #ccc; */
-    border-radius: 5px;
-    box-shadow:  -20px 20px 60px #b2b2b2,
-                 20px -20px 60px #f0f0f0;
+    box-shadow:  
+        -10px 10px 60px rgba(204, 247, 255, 0.8),
+        10px -10px 60px rgba(204, 247, 255, 0.8);
+
+    /* you need this because it's hidden initially and enabled by js */
+    opacity: 0;
 }
 
 #main-content > div:first-child{
-    /* background-color: whitesmoke; */
     background-color: rgba(245, 245, 245, 0.8);
     border-bottom: 1px solid #ccc;
     height: 30px;
     width: 100%;
     font-size: 1rem;
     user-select: none;
-    /* text-shadow: 1px 1px 2px pink; */
-    text-shadow: #FC0 1px 0 5px;
+    text-shadow: #FC0 1px 0 10px;
     text-align: center;
     padding-top: 4px;
 }
@@ -95,42 +93,40 @@ body{
     align-self:stretch;
     text-align: center;
     height: 60%;
-    border: 1px solid #ccc;
-    border-radius: 0 0 5px 5px;
     margin: 10px 7px 10px 7px;
     font-size: 8rem;
+    text-shadow: rgb(0, 247, 255) 1px 0 5px;
     padding-top: 35px;
-    box-shadow:  -5px 5px 10px #b2b2b2,
-                 5px -5px 10px #f0f0f0;
+    border: 1px solid white;
+    border-radius: 0 0 5px 5px;
 }
 
 .key-box {
     width: 30%;
     height: 80px;
-    border: 1px solid #ccc;
+    border: 1px solid white;    
     border-radius: 0 0 5px 5px;
     margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    box-shadow:  -5px 5px 10px #b2b2b2,
-                 5px -5px 10px #f0f0f0;
 }
 
 .key-box > div:first-child{
-    /* background-color: whitesmoke; */
     background-color: rgba(245, 245, 245, 0.8);
     border-bottom: 1px solid #ccc;
     height: 20px;
     width: 100%;
     font-size: 0.9rem;
     text-align: center;
+    text-shadow: #FC0 1px 0 10px;
 }
 
 .key-box > div:last-child{
     align-self: stretch;
     font-size: 1.3rem;
     margin: auto;
+    text-shadow: rgb(0, 247, 255) 1px 0 5px;
 }
 
 .modi-keys{
@@ -141,22 +137,20 @@ body{
     text-align: center;
 }
 
-/* .nice-border{
-    border-radius: 5px;
-    background: #d1d1d1;
-    box-shadow:  -20px 20px 60px #b2b2b2,
-                 20px -20px 60px #f0f0f0;
-} */
 
-
+.glass-8 {
+    border: 1px solid rgba(255,255,255,.7);
+    box-shadow: 0 0 1rem 0 rgba(0,0,0,.3);
+    backdrop-filter: blur(8px);
+}
 .glass-10 {
     border: 1px solid rgba(255,255,255,.7);
     box-shadow: 0 0 1rem 0 rgba(0,0,0,.3);
     backdrop-filter: blur(10px);
 }
-
-.glass-30 {
+.glass-15 {
     border: 1px solid rgba(255,255,255,.7);
     box-shadow: 0 0 1rem 0 rgba(0,0,0,.3);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(15px);
 }
+  

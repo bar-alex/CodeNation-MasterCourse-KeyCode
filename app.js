@@ -1,4 +1,4 @@
-const welcomeMsg   = document.getElementById('welcome-msg');
+const welcomeMsg    = document.getElementById('welcome-msg');
 const mainContent   = document.getElementById('main-content'); 
 
 const keypressDiv   = document.getElementById('keypress-div'); 
@@ -13,7 +13,7 @@ const evKeyShift    = document.getElementById('ev-shift');
 const evKeyAlt      = document.getElementById('ev-alt');
 
 
-// cycle through background
+// cycle through backgrounds
 setInterval(() => {
     const rnd = Math.ceil(Math.random()*3);
     document.body.style.background = 
@@ -21,7 +21,9 @@ setInterval(() => {
         rnd==2 ? 'fixed no-repeat url("/assets/background2.jpg")':
         'fixed no-repeat url("/assets/background3.webp")';
     document.body.style.backgroundSize = 'cover';
+    document.body.style.backgroundAttachment = 'fixed';
 }, 1000*10);  // 5 min ->  1000*60*5
+
 
 document.addEventListener('keydown', (event) => {
     
@@ -44,8 +46,8 @@ document.addEventListener('keydown', (event) => {
     evKeyCtrl.style.borderColor = event.ctrlKey   ? 'blue'  : 'whitesmoke';  //#ccc
     evKeyCtrl.style.color       = event.ctrlKey   ? 'black' : 'whitesmoke';
 
-    evKeyShift.style.borderColor = event.shiftKey ? 'red'   : 'whitesmoke';
-    evKeyShift.style.color       = event.shiftKey ? 'black' : 'whitesmoke';
+    evKeyShift.style.borderColor= event.shiftKey  ? 'red'   : 'whitesmoke';
+    evKeyShift.style.color      = event.shiftKey  ? 'black' : 'whitesmoke';
 
     evKeyAlt.style.borderColor  = event.altKey    ? 'chartreuse' : 'whitesmoke';
     evKeyAlt.style.color        = event.altKey    ? 'black'      : 'whitesmoke';
